@@ -4,12 +4,20 @@ import ArtikelTag from './ArtikelTag'
 class GruppenTag extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      aufklappen: true
+    }
+
   }
 
   artikelEntfernen(name) {
     this.props.gruppe.artikelEntfernen(name)
     // this.props.aktiveGruppeHandler(this.props.gruppe)
     this.forceUpdate()
+  }
+
+  aufUndZuKlappen () {
+    this.setState({aufklappen: !this.state.aufklappen})
   }
 
   render() {
@@ -21,7 +29,7 @@ class GruppenTag extends React.Component {
         <dt className={this.props.aktiv ? "aktiv" : "inaktiv"}
             onClick={() => this.props.aktiveGruppeHandler(gruppe)}>
           <span>{gruppe.name}</span>
-          <i className="material-icons">expand_less</i>
+          <i className="material-icons" onClick={() => this.aufUndZuKlappen()}>expand_less</i>
         </dt>)
     }
 

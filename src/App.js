@@ -102,7 +102,7 @@ class App extends React.Component {
     return (
       <div id="container">
         <header>
-          <h1>Watchlist</h1>
+          <h1>ListOfLive</h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>
@@ -116,11 +116,10 @@ class App extends React.Component {
           </label>
 
         </header>
-        <hr/>
 
         <main>
           <section>
-            <h2>Noch zu kaufen
+            <h2>Noch zu Erreichen
               <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
                 {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
@@ -129,9 +128,8 @@ class App extends React.Component {
               {nochZuKaufen}
             </dl>
           </section>
-          <hr/>
           <section>
-            <h2>Schon gekauft
+            <h2>Schon Erreicht
               <i onClick={() => this.erledigtAufZuKlappen()} className="material-icons">
                 {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
@@ -141,7 +139,6 @@ class App extends React.Component {
             </dl>
           </section>
         </main>
-        <hr/>
 
         <footer>
           <button className="mdc-button mdc-button--raised"
@@ -158,7 +155,6 @@ class App extends React.Component {
             <span className="mdc-button__ripple"></span> Setup
           </button>
         </footer>
-
         {gruppenDialog}
       </div>
     )

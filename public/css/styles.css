@@ -1,94 +1,156 @@
 #root {
-    width: 23rem;
+    width: 420px;
     background-image: url("../img/markt.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: inherit;
+    border-radius: 6px;
+
 }
+
 #container {
-    opacity: 85%;
+    opacity: 93%;
+    border-radius: 6px;
+
 }
+
 :root {
-    --mdc-theme-primary: #33691E;
+    --mdc-theme-primary: coral;
     --mdc-theme-secondary: #827717;
+    border-radius: 6px;
 }
+
+h1 {
+    color: white;
+    text-shadow: 4px 4px black;
+}
+
+.mdc-button__ripple {
+    color: black;
+    opacity: 50%;
+}
+
 dt {
     background-color: #7CB342;
     color: var(--mdc-theme-on-primary);
 }
+
 h2, dd {
     background-color: var(--mdc-theme-on-primary);
+
 }
 
-.aktiv { background-color: #4b81d6 }
-.inaktiv { background-color: #7CB342 }
+.aktiv {
+    background-color: darkviolet;
+}
+
+.inaktiv {
+    background-color: coral;
+}
+
 h1, h2, dl {
-    margin: 0;
+    margin: 6px;
+    text-align: center;
+    padding-top: 6px;
 }
+
 h2 {
-    padding: 0 0 10px 0;
+    padding: 5px 0 5px 0;
+    border-radius: 6px;
+
 }
+
 i.material-icons {
     cursor: pointer;
     float: right;
+    padding-top: 8px;
+    text-align: center;
+    font-size: x-large;
 }
+
 button.material-icons {
     font-size: inherit;
     vertical-align: bottom
 }
+
 [type="checkbox"] {
-    vertical-align: top;
-    margin-right: 8px;
+    vertical-align: auto;
+    margin-right: 1px;
 }
+
 dt {
+    vertical-align: center;
     display: flex;
     font-weight: 500;
-    padding: 3px 5px;
+    text-align: center;
+    margin-top: 4px;
+    border-radius: 6px;
 }
+
 dt span {
     width: 100%;
+    border-radius: 6px;
+
 }
+
 dt, dd {
     height: 2rem;
     font-size: 1.2rem;
+
 }
+
 dd {
     display: flex;
-    margin-left: 0;
-    margin: 3px;
+    margin: 1px;
+    border-radius: 6px;
+
 }
+
 dd label {
-    padding: 3px 0;
+    padding: 6px 0;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 dd label input[type="checkbox"] {
     margin: 6px 6px;
 }
+
 dd input[type="search"] {
-    margin-left: 1.5rem;
+    margin: 6px;
 }
+
 .mdc-text-field {
-    height: 2rem;
+    text-align: center;
+    border-radius: 6px;
+    margin: 5%;
+
+    --mdc-theme-background: blue;
+
+    height: 2.2rem;
 }
 
 label {
-    width: 91%;
+    width: 90%;
     cursor: pointer
 }
+
 footer {
     display: flex;
     justify-content: space-between;
+    border-radius: 4px;
 }
 
 .mdc-dialog {
     opacity: 100%;
 }
+
 .mdc-dialog__surface {
-    position: absolute;
-    top: 10%;
-    left: 25px;
+    position: unset;
+    top: 2%;
+    left: 5px;
 }
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -105,3 +167,13 @@ footer {
     -webkit-font-smoothing: antialiased;
 }
 
+.mdc-button__ripple {
+}
+
+footer {
+    padding: 12px 2% 6px 2% ;
+}
+
+main {
+    padding: 0px 10% 12px 10%
+}
