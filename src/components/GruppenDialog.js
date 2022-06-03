@@ -13,19 +13,17 @@ class GruppenDialog extends React.Component {
   gruppeHinzufuegen() {
     let eingabe = document.getElementById("eingabe")
     let gruppenName = eingabe.value.trim()
-
     if (gruppenName.length > 0) {
       Modell.gruppeHinzufuegen(gruppenName)
-      eingabe.value = ""
-      eingabe.focus()
+      this.setState({gruppenListe: Modell.gruppenListe})
     }
-    this.setState(this.state)
+    eingabe.value = ""
+    eingabe.focus()
   }
 
   gruppeEntfernen(name) {
     Modell.gruppeEntfernen(name)
-    this.setState(this.state)
-    // ToDo: implementieren
+    this.setState({gruppenListe: Modell.gruppenListe})
   }
 
   render() {
@@ -55,7 +53,7 @@ class GruppenDialog extends React.Component {
                 <span className="mdc-text-field__ripple"></span>
                 <input className="mdc-text-field__input" type="search"
                        id="eingabe" placeholder="Gruppe hinzufügen"
-                       onKeyPress={e => (e.key == 'Enter') ? this.gruppeHinzufuegen() : ''}/>
+                       onKeyPress={e => (e.key === 'Enter') ? this.gruppeHinzufuegen() : ''}/>
                 <span className="mdc-line-ripple"></span>
                 <i className="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
                    tabIndex="0" role="button"

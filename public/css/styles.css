@@ -1,8 +1,8 @@
 #root {
     width: 420px;
     background-image: url("../img/markt.jpg");
-    background-repeat: repeat;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center 35%;
     background-attachment: inherit;
     border-radius: 6px;
 
@@ -177,3 +177,4 @@ footer {
 main {
     padding: 0px 10% 12px 10%
 }
+

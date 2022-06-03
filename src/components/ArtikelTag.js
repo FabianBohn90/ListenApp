@@ -25,7 +25,7 @@ class ArtikelTag extends React.Component {
    * @param {Event.KEYPRESS} event -
    */
   artikelUmbenennen(artikel, event) {
-    if (event && event.key != "Enter") return
+    if (event && event.key !== "Enter") return
     // ToDo: Modell.aktuelleGruppe.artikelUmbenennen() verwenden
     artikel.name = this.state.newName
     this.setState({isEditing: false})
