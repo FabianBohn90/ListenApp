@@ -148,12 +148,12 @@ class App extends React.Component {
     return (
       <div id="container">
         <header>
-          <h1>ListOfLive</h1>
+          <h1>Life Goals</h1>
           <label
             className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
             <span className="mdc-text-field__ripple"></span>
             <input className="mdc-text-field__input" type="search"
-                   id="artikelEingabe" placeholder="Artikel hinzufügen"
+                   id="artikelEingabe" placeholder="Ziele hinzufügen"
                    onKeyPress={e => (e.key === 'Enter') ? this.artikelHinzufuegen() : ''}/>
             <span className="mdc-line-ripple"></span>
             <i className="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
@@ -165,7 +165,7 @@ class App extends React.Component {
 
         <main>
           <section>
-            <h2>Noch zu Erreichen
+            <h2 className="ziele">Ziele
               <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
                 {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>
@@ -175,7 +175,7 @@ class App extends React.Component {
             </dl>
           </section>
           <section>
-            <h2>Schon Erreicht
+            <h2 className="erreicht">Erreicht
               <i onClick={() => this.erledigtAufZuKlappen()} className="material-icons">
                 {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
               </i>

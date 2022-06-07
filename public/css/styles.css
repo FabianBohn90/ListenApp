@@ -1,178 +1,234 @@
 #root {
-    max-width: 420px;
-    background-image: url("../img/markt.jpg");
-    background-repeat: no-repeat;
-    background-position: center 35%;
-    background-attachment: inherit;
-    border-radius: 6px;
-
+  max-width: 420px;
+  background-image: url("../img/1653382577_looped_1653382576.gif");
+  background-size: cover;
+  border-radius: 10px;
+  background-position: unset;
+  box-shadow: 4px 4px #0B355C;
+  height: 30vh;
+  padding: 0;
+  margin: 0;
 }
 
 #container {
-    opacity: 93%;
-    border-radius: 6px;
-
+  border-radius: 6px;
 }
 
 :root {
-    --mdc-theme-primary: coral;
-    --mdc-theme-secondary: darkviolet;
-    border-radius: 6px;
+  --mdc-theme-primary: black;
+  --mdc-theme-background: black;
 }
 
 h1 {
-    animation: smoke 5s;
-    color: white;
-    text-shadow: 4px 4px black;
-}
-
-.mdc-button__ripple {
-    color: black;
-    opacity: 50%;
-}
-
-dt {
-    background-color: coral;
-    color: var(--mdc-theme-on-primary);
-}
-
-h2, dd {
-    background-color: var(--mdc-theme-on-primary);
-
-}
-
-.aktiv {
-    background-color: darkmagenta;
-}
-
-.inaktiv {
-    background-color: coral;
-}
-
-h1, h2, dl {
-    margin: 6px;
-    text-align: center;
-    padding-top: 6px;
+  color: white;
+  text-shadow: 4px 4px #0B355C;
+  margin: 6px;
+  text-align: center;
+  padding-top: 6px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 h2 {
-    padding: 5px 0 5px 0;
-    border-radius: 6px;
-
+  font-size: 1.3rem;
+  margin: 6px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px 0 5px 0;
+  border-radius: 6px;
 }
 
-i.material-icons {
-    cursor: pointer;
-    float: right;
-    padding-top: 8px;
-    text-align: center;
-    font-size: x-large;
+.ziele {
+  box-shadow: 1px 1px 4px 4px #0B355C;
 }
 
-button.material-icons {
-    font-size: inherit;
-    vertical-align: bottom
-}
-
-[type="checkbox"] {
-    vertical-align: auto;
-    margin-right: 1px;
+.erreicht {
+  box-shadow: 1px 1px 4px 4px #0B355C;
 }
 
 dt {
-    vertical-align: center;
-    display: flex;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 4px;
-    border-radius: 6px;
-}
-
-dt span {
-    width: 100%;
-    border-radius: 6px;
-
-}
-
-dt, dd {
-    height: 2rem;
-    font-size: 1.2rem;
-
+  background-color: black;
+  color: white;
+  vertical-align: center;
+  display: flex;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4px;
+  border-radius: 6px;
+  height: 2rem;
+  font-size: 1.1rem;
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 dd {
-    display: flex;
-    margin: 1px;
-    border-radius: 6px;
+  background-color: white;
+  display: flex;
+  margin: 1px;
+  border-radius: 6px;
+  height: 2rem;
+  font-size: 1rem;
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.aktiv {
+  background:
+  repeating-linear-gradient(
+      -45deg, transparent, transparent 5px, #52278F 5px,
+      #52278F 10px),
+  repeating-linear-gradient(
+      45deg, transparent, transparent 5px, #52278F 5px,
+      #52278F 10px);
 
 }
 
+.inaktiv {
+  background:
+    repeating-linear-gradient(
+      -45deg, transparent, transparent 5px, #0B355C 5px,
+      #0B355C 10px),
+    repeating-linear-gradient(
+      45deg, transparent, transparent 5px, #0B355C 5px,
+      #0B355C 10px);
+
+}
+
+
+
+i.material-icons {
+  cursor: pointer;
+  float: right;
+  padding-top: 8px;
+  text-align: center;
+  font-size: x-large;
+}
+
+button.material-icons {
+  font-size: inherit;
+  vertical-align: bottom;
+}
+
+[type="checkbox"] {
+  vertical-align: revert;
+  margin-right: 1px;
+}
+
+dt span {
+  width: 100%;
+  border-radius: 6px;
+}
+
+span {
+  text-align: center;
+  padding-top: 4px;
+}
+
+
 dd label {
-    padding: 6px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  padding: 6px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 dd label input[type="checkbox"] {
-    margin: 6px 6px;
+  margin: 4px 4px;
 }
 
 dd input[type="search"] {
-    margin: 6px;
+  margin: 4px;
+
 }
 
 .mdc-text-field {
-    text-align: center;
-    border-radius: 6px;
-    margin: 5%;
-
-    --mdc-theme-background: blue;
-
-    height: 2.2rem;
+  text-align: center;
+  border-radius: 6px;
+  margin: 5%;
+  height: 2.2rem;
 }
 
 label {
-    width: 90%;
-    cursor: pointer
+  width: 90%;
+  cursor: pointer
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 4px;
+/*dialog fenster*/
+.mdc-dialog__content {
+background-color: white;
 }
 
-.mdc-dialog {
-    opacity: 100%;
+.mdc-dialog__title {
+  background-color: white;
+  color: white;
+}
+
+.mdc-dialog__actions {
 }
 
 .mdc-dialog__surface {
-    position: unset;
-    top: 2%;
-    left: 5px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 20%;
+  bottom: 40%;
 }
 
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 30px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
 footer {
-    padding: 12px 2% 6px 2% ;
+  padding: 12px 2% 6px 2%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 4px 4px #0B355C;
 }
 
 main {
-    padding: 2px 5% 12px 5%
+  padding: 26px 5% 12px 5%;
+  background-color: black;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  box-shadow: 4px 4px #0B355C;
 }
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
 
