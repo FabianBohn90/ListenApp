@@ -189,7 +189,7 @@ class App extends React.Component {
         <footer>
           <button className="mdc-button mdc-button--raised"
                   onClick={() => this.setState({showGruppenDialog: true})}>
-            <span className="material-icons">bookmark_add</span>
+            <span className="material-icons">join_inner</span>
             <span className="mdc-button__ripple"></span> Gruppen
           </button>
           <button className="mdc-button mdc-button--raised"

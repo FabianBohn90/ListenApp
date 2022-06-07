@@ -57,7 +57,7 @@ dt {
   display: flex;
   font-weight: 500;
   text-align: center;
-  margin-top: 4px;
+  margin-top: 14px;
   border-radius: 6px;
   height: 2rem;
   font-size: 1.1rem;
@@ -74,13 +74,40 @@ dd {
   margin: 1px;
   border-radius: 6px;
   height: 2rem;
-  font-size: 1rem;
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
 }
+
+
+dd:hover {
+  animation: swiggle 230ms forwards;
+}
+
+@keyframes swiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  15% {
+    transform: translate(1rem, 0);
+  }
+
+  35% {
+    transform: translate(-1rem, 0);
+  }
+
+  55% {
+    transform: translate(1rem, 0);
+  }
+
+  80% {
+    transform: translate(-1rem, 0);
+  }
+
+  100% {
+    transform: translate(0, 0) ;
+  }
+}
+
+
 
 .aktiv {
   background:
@@ -106,16 +133,9 @@ dd {
 
 
 
-i.material-icons {
-  cursor: pointer;
-  float: right;
-  padding-top: 8px;
-  text-align: center;
-  font-size: x-large;
-}
+
 
 button.material-icons {
-  font-size: inherit;
   vertical-align: bottom;
 }
 
@@ -183,12 +203,20 @@ background-color: white;
   bottom: 40%;
 }
 
+i.material-icons {
+  cursor: pointer;
+  float: right;
+  padding-top: 8px;
+  text-align: center;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
+  padding: 4px 2px 6px 6px;
   font-style: normal;
-  font-size: 24px;
-  line-height: 1;
+  font-size: 1.6rem;
+  line-height: 1rem;
   letter-spacing: normal;
   text-transform: none;
   display: inline-block;
