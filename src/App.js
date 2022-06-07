@@ -6,12 +6,11 @@ import SortierDialog from "./components/SortierDialog";
 
 /**
  * @version 1.0
- * @author Alfred Walther <alfred.walther@syntax-institut.de>
+ * @author Fabian Bohn <FabianBohn90@gmail.com>
  * @description Diese App ist eine Einkaufsliste mit React.js und separatem Model, welche Offline verwendet werden kann
  * @license Gnu Public Lesser License 3.0
  *
  */
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -42,15 +41,18 @@ class App extends React.Component {
     })
   }
 
+  /** klappt Kategorie einkaufen aus oder zu */
   einkaufenAufZuKlappen() {
     let neuerZustand = !this.state.einkaufenAufgeklappt
     this.setState({einkaufenAufgeklappt: neuerZustand})
   }
 
+  /** klappt Kategorie erledigt aus oder zu */
   erledigtAufZuKlappen() {
     this.setState({erledigtAufgeklappt: !this.state.erledigtAufgeklappt})
   }
 
+  /** Löscht den Local Storage */
   lsLoeschen() {
     if (confirm("Wollen Sie wirklich alles löschen?!")) {
       localStorage.clear()
@@ -68,6 +70,9 @@ class App extends React.Component {
     this.setState(this.state)
   }
 
+  /**
+   * Fügt einen Artikel hinzu
+   */
   artikelHinzufuegen() {
     // ToDo: implementiere diese Methode
     const eingabe = document.getElementById("artikelEingabe")
@@ -80,12 +85,21 @@ class App extends React.Component {
     eingabe.focus()
   }
 
+  /**
+   * Markiert die aktive Gruppe farbig und fügt nur in der aktiven Gruppe artikel hinzu
+   * @param {gruppe} gruppe - Die aktuelle Gruppe wird als aktive Gruppe gesetzt
+   * */
   setAktiveGruppe(gruppe) {
     Modell.aktiveGruppe = gruppe
     Modell.informieren("[App] Gruppe \"" + gruppe.name + "\" ist nun aktiv")
     this.setState({aktiveGruppe: Modell.aktiveGruppe})
   }
 
+  /**
+   * Schließt den Sortier Dialog
+   * @param {reihenfolge} reihenfolge - Eigene Reihenfolge
+   * @param {sortieren}  sortieren - aufsteigend, absteigend
+   */
   closeSortierDialog = (reihenfolge, sortieren) => {
     if (sortieren) {
       Modell.sortieren(reihenfolge)

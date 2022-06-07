@@ -1,5 +1,5 @@
 #root {
-    width: 420px;
+    max-width: 420px;
     background-image: url("../img/markt.jpg");
     background-repeat: no-repeat;
     background-position: center 35%;
@@ -16,11 +16,12 @@
 
 :root {
     --mdc-theme-primary: coral;
-    --mdc-theme-secondary: #827717;
+    --mdc-theme-secondary: darkviolet;
     border-radius: 6px;
 }
 
 h1 {
+    animation: smoke 5s;
     color: white;
     text-shadow: 4px 4px black;
 }
@@ -31,7 +32,7 @@ h1 {
 }
 
 dt {
-    background-color: #7CB342;
+    background-color: coral;
     color: var(--mdc-theme-on-primary);
 }
 
@@ -41,7 +42,7 @@ h2, dd {
 }
 
 .aktiv {
-    background-color: darkviolet;
+    background-color: darkmagenta;
 }
 
 .inaktiv {
@@ -167,14 +168,11 @@ footer {
     -webkit-font-smoothing: antialiased;
 }
 
-.mdc-button__ripple {
-}
-
 footer {
     padding: 12px 2% 6px 2% ;
 }
 
 main {
-    padding: 0px 10% 12px 10%
+    padding: 2px 5% 12px 5%
 }
 

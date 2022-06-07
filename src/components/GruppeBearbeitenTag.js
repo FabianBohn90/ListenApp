@@ -15,6 +15,11 @@ class GruppeBearbeitenTag extends React.Component {
     this.setState({newName: gruppenName})
   }
 
+  /**
+   * Benennt eine Gruppe um
+   * * @param {gruppe} gruppe - Benennt eine Gruppe um
+   * @param {event} event - vom User ausgelöstes Event
+   */
   gruppeUmbenennen(gruppe, event) {
     if (event && event.key !== "Enter") return
     Modell.gruppeUmbenennen(gruppe.name, this.state.newName)
