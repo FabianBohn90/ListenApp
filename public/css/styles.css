@@ -1,13 +1,16 @@
 #root {
   max-width: 420px;
   background-image: url("../img/1653382577_looped_1653382576.gif");
-  background-size: cover;
   border-radius: 10px;
   background-position: unset;
-  box-shadow: 4px 4px #0B355C;
-  height: 30vh;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.8);
+  background-size: 420px;
   padding: 0;
   margin: 0;
+}
+
+body {
+
 }
 
 #container {
@@ -76,7 +79,6 @@ dd {
   height: 2rem;
 }
 
-
 dd:hover {
   animation: swiggle 230ms forwards;
 }
@@ -103,15 +105,12 @@ dd:hover {
   }
 
   100% {
-    transform: translate(0, 0) ;
+    transform: translate(0, 0);
   }
 }
 
-
-
 .aktiv {
-  background:
-  repeating-linear-gradient(
+  background: repeating-linear-gradient(
       -45deg, transparent, transparent 5px, #52278F 5px,
       #52278F 10px),
   repeating-linear-gradient(
@@ -121,19 +120,14 @@ dd:hover {
 }
 
 .inaktiv {
-  background:
-    repeating-linear-gradient(
+  background: repeating-linear-gradient(
       -45deg, transparent, transparent 5px, #0B355C 5px,
       #0B355C 10px),
-    repeating-linear-gradient(
+  repeating-linear-gradient(
       45deg, transparent, transparent 5px, #0B355C 5px,
       #0B355C 10px);
 
 }
-
-
-
-
 
 button.material-icons {
   vertical-align: bottom;
@@ -175,6 +169,7 @@ dd input[type="search"] {
   border-radius: 6px;
   margin: 5%;
   height: 2.2rem;
+  box-shadow: 4px 4px 4px 4px black;
 }
 
 label {
@@ -184,7 +179,7 @@ label {
 
 /*dialog fenster*/
 .mdc-dialog__content {
-background-color: white;
+  background-color: white;
 }
 
 .mdc-dialog__title {
@@ -234,7 +229,6 @@ footer {
   justify-content: space-between;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 4px 4px #0B355C;
 }
 
 main {
@@ -242,7 +236,6 @@ main {
   background-color: black;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  box-shadow: 4px 4px #0B355C;
 }
 
 @keyframes slidein {
@@ -256,7 +249,6 @@ main {
     opacity: 1;
     transform: translateY(0px);
   }
-
 }
 
 
